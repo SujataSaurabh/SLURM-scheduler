@@ -4,4 +4,12 @@ sbatch multi-processing.py
 # if number of cpus per task are defined with sbatch command 
 sbatch --cpus-per-task 2 multi-processing.py
 
-#
+# for the number of processes that the program will launch. This can be on separate machines. 
+sbatch --ntasks=8 multi-processing.py
+
+# for the number of processes with specifying the number of cpus per task
+sbatch --ntasks=8 --cpus-per-task=2 multi-processing.py
+
+# using --mem-per-cpu to specify the memory per core, in MB (or G for GB)
+sbatch --ntasks=8 --cpus-per-task=2 --mem-per-cpu=4G multi-processing.py
+
