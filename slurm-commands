@@ -1,0 +1,7 @@
+# if number of cpus per task for SLURM are in defined in pyrthon script    
+sbatch multi_processing.py 
+
+# if number of cpus per task are defined with sbatch command 
+sbatch --cpus-per-task 2 multi_processing.py
+
+#
